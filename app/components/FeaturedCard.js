@@ -29,7 +29,7 @@ const FeaturedCard = ({id, title, description}) => {
                     rating ={4.8}
                     genre={"Offers"}
                     address={"Clink Street"}
-                    short_description={""}
+                    short_description={" Nando's is a South African multinational fast casual chain that specialises in flame-grilled peri-peri style chicken."}
                     dishes={""}
                     long={""}
                     lat ={""}
@@ -41,7 +41,7 @@ const FeaturedCard = ({id, title, description}) => {
                     rating ={4.8}
                     genre={"Offers"}
                     address={"Clink Street"}
-                    short_description={""}
+                    short_description={" Nando's is a South African multinational fast casual chain that specialises in flame-grilled peri-peri style chicken."}
                     dishes={""}
                     long={""}
                     lat ={""}
@@ -53,7 +53,7 @@ const FeaturedCard = ({id, title, description}) => {
                     rating ={4.8}
                     genre={"Offers"}
                     address={"Clink Street"}
-                    short_description={""}
+                    short_description={" Nando's is a South African multinational fast casual chain that specialises in flame-grilled peri-peri style chicken."}
                     dishes={""}
                     long={""}
                     lat ={""}
