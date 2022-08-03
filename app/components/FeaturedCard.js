@@ -11,7 +11,6 @@ const FeaturedCard = ({id, title, description}) => {
         </View>
         {/* Subtitle */}
         <Text className="px-4 text-sm font-regular text-gray-400 flex ">{description}</Text>
-        
         {/* Items */}
         <ScrollView
             horizontal

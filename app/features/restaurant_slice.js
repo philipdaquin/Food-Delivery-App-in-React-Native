@@ -2,11 +2,20 @@ import { createSlice } from '@reduxjs/toolkit'
 
 
 const initialState = {
-    items: []
+    restaurant: { 
+      id: null, 
+      img: null, 
+      title: null, 
+      rating: null, 
+      genre: null, 
+      address: null, 
+      description: null, 
+      dishes: null
+    }
 }
 
 export const basketSlice = createSlice({
-  name: "basket",
+  name: "restaurant",
   initialState,
   reducers: {
     add_to_basket: (state, action) => {
@@ -29,7 +38,7 @@ export const basketSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { add_to_basket, remove_from_basket } = basketSlice.actions
+export const { add_to_basket, remove_from_basket } = restaurantSlice.actions
 export const select_basket_item_with_id = (state, id) => state
     .basket
     .items
@@ -40,4 +49,4 @@ export const select_basket_total = (state) => state
     .items
     .reduce((total, item) => 
     total -= item.price, 0)
-export default basketSlice.reducer 
+export default restaurantSlice.reducer 
