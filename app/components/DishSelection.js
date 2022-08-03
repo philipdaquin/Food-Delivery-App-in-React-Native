@@ -28,9 +28,7 @@ const DishSelection = ({
   }
   const remove_item_basket = () => { 
     if (!items.length) return ;  
-    dispatch(remove_from_basket({ id
-        
-    }))
+    dispatch(remove_from_basket({ id }))
   }
 
 
@@ -55,7 +53,7 @@ const DishSelection = ({
                             borderWidth: 1,
                             borderColor: "#F3F3F4"
                         }}
-                        sources={{uri: {image}}}/>    
+                        source={{uri: image}}/>    
                 </View>
             </View>
         </TouchableOpacity>
