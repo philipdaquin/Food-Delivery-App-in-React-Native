@@ -2,6 +2,8 @@ import { View, Text, Image, Button, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import {ArrowLeftIcon, PlusCircleIcon, MinusCircleIcon} from 'react-native-heroicons/solid'
 import Currency from 'react-currency-formatter';
+import { useDispatch, useSelector } from 'react-redux';
+import { add_to_basket, remove_from_basket, select_basket_item, select_basket_item_with_id } from '../features/backet_slice';
 
 const DishSelection = ({
     id, 
@@ -11,8 +13,26 @@ const DishSelection = ({
     image
 }) => {
 
-  const [Plus, setPlus] = useState(false)  
-  const [Orders, setOrders] = useState(0);
+  const [Plus, setPlus] = useState(false);
+  const items = useSelector(state => select_basket_item_with_id(state, id));
+  const dispatch = useDispatch(); 
+
+  const add_item_basket = () => { 
+    dispatch(add_to_basket({ 
+        id, 
+        title, 
+        description, 
+        price, 
+        image
+    }))
+  }
+  const remove_item_basket = () => { 
+    if (!items.length) return ;  
+    dispatch(remove_from_basket({ id
+        
+    }))
+  }
+
 
   return (
     <>
@@ -43,14 +63,17 @@ const DishSelection = ({
             Plus &&  (
                 <View className ="bg-white px-4">
                     <View className="flex-row items-center space-x-2 pb-3">
-                        <TouchableOpacity >
+                        <TouchableOpacity onPress={remove_item_basket}>
                             <MinusCircleIcon color={"#00CCBB"} size={40}
                                 // color={items.length > 0 ? "#00CCBB" :  "gray"}
                             />
                         </TouchableOpacity>
-                        <Text>{Orders}</Text>
-                        <TouchableOpacity onPress={() => {}}>
-                            <PlusCircleIcon color={"#00CCBB"} size={40}/>
+                        <Text>{items.length}</Text>
+                        <TouchableOpacity onPress={add_item_basket}>
+                            <PlusCircleIcon 
+                                color={"#00CCBB"} 
+                                size={40}
+                            />
                         </TouchableOpacity>
                     </View>
                 </View>

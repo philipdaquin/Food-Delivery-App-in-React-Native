@@ -1,5 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
+import {  basketSlice} from './features/backet_slice'
 
-export default configureStore({
-  reducer: {},
+export const store = configureStore({
+  reducer: {
+    basket: basketSlice.reducer
+  },
 })
