@@ -10,7 +10,7 @@ const PreparingPage = () => {
   useEffect(() => { 
     // After couple seconds switch to the next screen 
     setTimeout(() => { 
-        navigation.navigate("Basket")
+        navigation.navigate("DeliveryPage")
     }, 5000)
   })
 
@@ -24,8 +24,9 @@ const PreparingPage = () => {
             className="h-96 w-96"
         />
         <Animatable.Text 
-            animation="slideInUp"
-            iterationCount={2}
+            animation="fadeInUp"
+            iterationCount={1}
+            iterationDelay={1000}
             className="text-white font-bold text-center text-lg my-10 "
         >
             Waiting for the Restaurant to accept your order!

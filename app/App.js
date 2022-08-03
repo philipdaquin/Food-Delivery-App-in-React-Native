@@ -9,6 +9,7 @@ import {Provider} from 'react-redux'
 import { store } from './store';
 import BasketScreen from './screens/BasketScreen';
 import PreparingPage from './components/PreparingPage';
+import DeliveryPage from './components/DeliveryPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,11 +23,13 @@ export default function App() {
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Restaurant" component={RestaurantScreen} />
             <Stack.Screen name="Basket" component={BasketScreen}
-              options={{presentation: "modal", headerShown: false}}
-            />
+              options={{presentation: "modal", headerShown: false}}/>
             <Stack.Screen name="PreparingPage" 
               options={{presentation: "fullScreenModal", headerShown: false}}
               component={PreparingPage} />
+            <Stack.Screen name="DeliveryPage" 
+              options={{presentation: "fullScreenModal", headerShown: false}}
+              component={DeliveryPage} />
 
           </Stack.Navigator>
         </TailwindProvider>
