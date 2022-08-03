@@ -72,7 +72,13 @@ const RestaurantScreen = () => {
 
             <Text className= "font-bold text-xl p-4 mt-1">Menu</Text>
 
-            <DishSelection/>
+            <DishSelection 
+                id={1}
+                title={"Peri-Peri Chicken"}
+                description={"Crunchy almonds, cachews and macadamia nuts in a fiery PERi-PERi seasoning. Serves 2-3 "}
+                price={4}
+                image={"https://foodiesterminal.com/wp-content/uploads/2019/08/just-like-nandos-peri-peri-chicken.jpg"}
+            />
 
 
         </ScrollView>
