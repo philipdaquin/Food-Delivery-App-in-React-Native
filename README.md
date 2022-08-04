@@ -1,2 +1,2 @@
 # Deliveroo-Native App 
-##### Purpose: To learn native app development
+##### Purpose: Practice Project for Native App Development
