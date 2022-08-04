@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { select_restaurant } from '../features/restaurant_slice';
 import {XIcon} from 'react-native-heroicons/solid'
 import * as Progress from 'react-native-progress'
-import MapView, {Marker}  from 'react-native-maps'
+// import MapView, {Marker}  from 'react-native-maps'
 
 
 const DeliveryPage = () => {
