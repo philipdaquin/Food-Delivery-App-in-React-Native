@@ -48,6 +48,7 @@ export default function HomeScreen() {
                 {/* Component  */}
                 <Categories/>
    
+   
                 {/* Featured Items */}
                 <FeaturedRows/>
             </ScrollView>
