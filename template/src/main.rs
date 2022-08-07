@@ -1,4 +1,4 @@
-use template::server::new_server;
+use template_rust::server::new_server;
 use failure::Error;
 
 
